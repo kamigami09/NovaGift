@@ -1,12 +1,14 @@
 {
-  "name": "Nova Gift",
+  "name": "Nova Gift — Cadeaux Promotionnels au Maroc",
   "short_name": "Nova Gift",
-  "description": "Nova Gift — Cadeaux promotionnels premium et solutions de branding au Maroc.",
+  "description": "Nova Gift — Cadeaux promotionnels premium et personnalisés au Maroc. Agendas, sacs, gourdes, high-tech, trophées. Gravure laser, broderie, sérigraphie. Livraison partout au Maroc.",
   "lang": "fr-MA",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",
   "theme_color": "#1C2B4A",
+  "categories": ["business", "shopping"],
   "icons": [
     {
       "src": "/favicon.svg",

@@ -1,0 +1,25 @@
+# Claude SEO plugin (local tooling, not part of the project)
+claude-seo/
+
+# Archive files
+*.rar
+*.zip
+*.tar.gz
+*.7z
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Node (if ever used)
+node_modules/
