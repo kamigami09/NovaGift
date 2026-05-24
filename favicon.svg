@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Prestige Gifts">
+  <rect width="64" height="64" rx="12" fill="#A86457"/>
+  <path d="M18 20h28v8H18z" fill="#fff"/>
+  <path d="M22 28h20v20H22z" fill="#fff"/>
+  <path d="M32 18v30M18 30h28" stroke="#A86457" stroke-width="3"/>
+  <path d="M24 20c0-5 8-5 8 0M32 20c0-5 8-5 8 0" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+</svg>
