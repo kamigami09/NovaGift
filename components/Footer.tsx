@@ -87,6 +87,12 @@ export default function Footer() {
                   {link.label}
                 </a>
               ))}
+              <a
+                href="/alternatives/lepublicitaire"
+                className="font-body font-light text-xs text-white/70 hover:text-gold transition-colors w-fit"
+              >
+                Nova Gift vs Le Publicitaire
+              </a>
             </div>
           </div>
 

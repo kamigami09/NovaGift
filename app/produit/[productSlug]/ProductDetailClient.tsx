@@ -58,10 +58,10 @@ export default function ProductDetailClient({ product }: { product: Product }) {
         <div className="flex gap-3 overflow-x-auto pb-1">
           {product.colors.map((color) => (
             <button
-              key={color.name}
+              key={color.image}
               onClick={() => { setSelectedColor(color); setImgError(false); }}
               className={`relative w-16 h-16 shrink-0 rounded-xl overflow-hidden border-2 transition-all cursor-pointer ${
-                selectedColor.name === color.name
+                selectedColor.image === color.image
                   ? "border-gold shadow-md"
                   : "border-[#E8E8E8] hover:border-gold/50"
               }`}
@@ -111,12 +111,12 @@ export default function ProductDetailClient({ product }: { product: Product }) {
             <div className="flex gap-3 flex-wrap">
               {product.colors.map((color) => (
                 <button
-                  key={color.name}
+                  key={color.image}
                   onClick={() => { setSelectedColor(color); setImgError(false); }}
                   title={color.name}
                   aria-label={color.name}
                   className={`w-12 h-12 rounded-lg border-2 overflow-hidden bg-[#F4F6FA] transition-all cursor-pointer hover:scale-105 ${
-                    selectedColor.name === color.name
+                    selectedColor.image === color.image
                       ? "border-gold scale-105 shadow-lg"
                       : "border-[#E8E8E8] hover:border-gold/50"
                   }`}

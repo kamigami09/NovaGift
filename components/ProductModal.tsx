@@ -183,10 +183,10 @@ export default function ProductModal({
               <div className="flex gap-2.5">
                 {product.colors.map((color) => (
                   <button
-                    key={color.name}
+                    key={color.image}
                     onClick={() => setSelectedColor(color)}
                     className={`w-[22px] h-[22px] rounded-full border transition-all relative ${
-                      selectedColor?.name === color.name
+                      selectedColor?.image === color.image
                         ? "border-gold scale-110 shadow-sm"
                         : "border-black/10 hover:scale-105"
                     }`}

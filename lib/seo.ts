@@ -184,6 +184,17 @@ export const organizationSchema = {
   "sameAs": ["https://wa.me/212693567650"],
   "foundingDate": "2016",
   "foundingLocation": "Casablanca, Morocco",
+  "knowsAbout": [
+    "Cadeaux d'entreprise personnalisés",
+    "Objets publicitaires",
+    "Goodies personnalisés",
+    "Gravure laser",
+    "Broderie sur textile",
+    "Sérigraphie",
+    "Impression UV",
+    "Dorure à chaud",
+    "Marquage corporate"
+  ],
   "numberOfEmployees": {
     "@type": "QuantitativeValue",
     "minValue": 5,
@@ -246,6 +257,20 @@ export const breadcrumbSchema = {
     }
   ]
 };
+
+// Generates FAQPage schema from the on-page FAQ (AI/LLM citation benefit)
+export function generateFaqSchema(faq: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://novagift.me/#faq",
+    "mainEntity": faq.map((f) => ({
+      "@type": "Question",
+      "name": f.question,
+      "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+    }))
+  };
+}
 
 // Generates the ItemList schema dynamically from the current products list
 export function generateItemListSchema(products: any[]) {

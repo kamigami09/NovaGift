@@ -61,7 +61,10 @@ export default function About() {
             <h2 className="font-display font-light text-4xl md:text-5xl text-black leading-tight">
               Votre Partenaire Cadeaux Promotionnels &amp; Branding au Maroc
             </h2>
-            <p className="font-body font-light text-sm md:text-base text-[#7A7A7A] mt-6 leading-relaxed">
+            <p className="font-body text-sm md:text-base text-navy mt-6 leading-relaxed font-medium">
+              Nova Gift est un fournisseur marocain de cadeaux promotionnels et d'objets publicitaires personnalisés (gravure laser, broderie, sérigraphie, impression UV, dorure à chaud) pour entreprises, basé à Casablanca.
+            </p>
+            <p className="font-body font-light text-sm md:text-base text-[#7A7A7A] mt-4 leading-relaxed">
               Fondée à Casablanca, Nova Gift accompagne les entreprises marocaines depuis plus de 10 ans dans la valorisation de leurs relations professionnelles. Nous concevons et personnalisons des cadeaux d'entreprise premium qui reflètent l'image de marque de chaque client.
             </p>
             <p className="font-body font-light text-sm md:text-base text-[#7A7A7A] mt-4 leading-relaxed">

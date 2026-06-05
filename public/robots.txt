@@ -14,17 +14,23 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# Allow AI search crawlers (for AI Overviews, ChatGPT search, Perplexity)
+# Allow AI search & retrieval crawlers (ChatGPT, Claude, Perplexity, Bing Copilot)
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
-# Block AI training crawlers (not search — protect content from scraping)
-User-agent: GPTBot
-Disallow: /
+User-agent: ClaudeBot
+Allow: /
 
+# Block pure AI-training scrapers (no search/citation benefit)
 User-agent: Google-Extended
 Disallow: /
 
@@ -35,9 +41,6 @@ User-agent: Bytespider
 Disallow: /
 
 User-agent: anthropic-ai
-Disallow: /
-
-User-agent: ClaudeBot
 Disallow: /
 
 # Rate limit aggressive SEO bots

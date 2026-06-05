@@ -2,9 +2,6 @@ import type { MetadataRoute } from "next";
 import { categories } from "@/data/categories";
 import { products } from "@/data/products";
 
-// Required for `output: export` — render this sitemap once at build time.
-export const dynamic = "force-static";
-
 const BASE_URL = "https://novagift.me";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -22,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "weekly",
       priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/alternatives/lepublicitaire`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.6,
     },
   ];
 

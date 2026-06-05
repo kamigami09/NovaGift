@@ -7,9 +7,11 @@ import {
   localBusinessSchema,
   organizationSchema,
   websiteSchema,
-  generateItemListSchema
+  generateItemListSchema,
+  generateFaqSchema
 } from "@/lib/seo";
 import { products } from "@/data/products";
+import { faqData } from "@/data/faq";
 import { OrderProvider } from "@/context/OrderContext";
 import OrderFloatingPanel from "@/components/OrderFloatingPanel";
 import Navbar from "@/components/Navbar";
@@ -33,7 +35,15 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   ...siteMetadata,
-  metadataBase: new URL("https://novagift.me")
+  metadataBase: new URL("https://novagift.me"),
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" }
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg"
+  }
 };
 export const viewport: Viewport = siteViewport;
 
@@ -44,6 +54,7 @@ export default function RootLayout({
 }>) {
   // Generate catalog item list schema
   const itemListSchema = generateItemListSchema(products);
+  const faqSchema = generateFaqSchema(faqData);
 
   return (
     <html
@@ -73,6 +84,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </head>
       <body className="min-h-full flex flex-col bg-white text-black font-body">

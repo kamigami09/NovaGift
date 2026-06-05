@@ -100,7 +100,7 @@ export default function ProductCard({ product, mode = "homepage" }: ProductCardP
           <div className="flex gap-2 mt-3 items-center flex-wrap">
             {product.colors.slice(0, 5).map((color) => (
               <button
-                key={color.name}
+                key={color.image}
                 onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
@@ -108,7 +108,7 @@ export default function ProductCard({ product, mode = "homepage" }: ProductCardP
                   setImageError(false);
                 }}
                 className={`w-7 h-7 rounded-md overflow-hidden border transition-all cursor-pointer ${
-                  selectedColor.name === color.name
+                  selectedColor.image === color.image
                     ? "border-gold ring-1 ring-gold"
                     : "border-black/10 hover:border-gold/50"
                 }`}
