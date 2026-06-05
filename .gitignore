@@ -1,25 +1,46 @@
-# Claude SEO plugin (local tooling, not part of the project)
-claude-seo/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Archive files
-*.rar
-*.zip
-*.tar.gz
-*.7z
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# OS generated files
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
 .DS_Store
-Thumbs.db
-desktop.ini
+*.pem
 
-# Editor / IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
 
-# Logs
-*.log
+# env files (can opt-in for committing if needed)
+.env*
 
-# Node (if ever used)
-node_modules/
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# project junk / large local-only files (must never reach GitHub)
+/Website_real images/
+/_backup/
+*.rar
